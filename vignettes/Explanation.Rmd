@@ -1,0 +1,47 @@
+---
+title: "What the package does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(package1)
+```
+
+# Introduction
+This is the vignette for my R package. In this package I have 8 functions that we used through out the class. Below are the descriptions. 
+
+## myboot2.r
+The myboot2 function in R performs bootstrap analysis to estimate the distribution of a statistic from a data sample, defaulting to the mean. It generates bootstrap samples, computes the statistic for each, and plots a histogram with a confidence interval and point estimate.
+
+## scatterhist.r
+The scatterhist function in R creates a composite plot consisting of a scatter plot for two variables along with their respective histograms positioned adjacent to the axes. It uses a layout matrix to organize the scatter plot and histograms efficiently, and it customizes plot margins and labels to produce a cohesive and informative visual representation.
+
+## pbinomf.r
+The pbinomf function in R calculates the cumulative probability up to a given quantile for a binomial distribution, based on specified parameters: the number of trials and the probability of success in each trial. This function essentially serves as a convenient wrapper for the pbinom function from the stats package, simplifying its usage in code.
+
+## ntickets.r
+The ntickets function in R calculates the optimal number of tickets to sell for a flight to minimize the risk of overbooking, given the total number of seats (N), the probability that the plane will be overbooked (gamma), and the probability that a ticket holder will show up (p). The function employs both discrete (binomial) and continuous (normal approximation) distributions to analyze and plot the relationship between the number of tickets sold and the overbooking risk, and returns the optimal ticket numbers for both scenarios along with relevant parameters for review.
+
+
+## myquad.r
+The myquad function in R computes the square of each element in a given vector of numeric values. It takes a single parameter, x, which is a vector of numbers, and returns a vector where each number is squared. This function is useful for element-wise mathematical operations in data analysis and manipulation.
+
+## myncurve.r
+The myncurve function in R plots the probability density function of a normal distribution with specified mean (mu) and standard deviation (sigma). It displays the curve over a range extending three standard deviations from the mean on either side. Additionally, the function returns a list containing the mean and standard deviation used for the distribution. This function is useful for visualizing the shape and spread of a normal distribution based on its parameters.
+
+## mymaxlik.r
+The mymaxlik function in R calculates maximum likelihood estimates by applying a user-defined likelihood function to a data set and a range of parameter values. It visualizes the results, highlighting the optimal parameter that maximizes the likelihood, and returns detailed information about this maximum, including a slope analysis around the peak.
+
+## mycltr.r
+The myclt function in R demonstrates the Central Limit Theorem by simulating samples from a uniform distribution between specified limits a and b, computing the sum of these samples across multiple iterations, and then plotting the distribution of these sums. It overlays a normal distribution curve to show convergence, reinforcing the theorem's prediction that the sum of a large number of independent and identically distributed random variables will be approximately normally distributed.
